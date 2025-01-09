@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Finds all possible Danish CPR numbers in the given text.
  *
@@ -25,14 +23,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * console.log(cprNumbers); // Output: ['010203-1234', '0405061234']
  * @author Nikolai Sandbeck
  */
-function findCprNumbers(text) {
+export function findCprNumbers(text: string): string[] {
     // CPR number pattern (handles with/without hyphen)
-    var cprPattern = /\b(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])\d{2}[-]?\d{4}\b/g;
+    const cprPattern = /\b(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])\d{2}[-]?\d{4}\b/g;
     return text.match(cprPattern) || [];
 }
-var text1 = "Invalid CPR numbers: 320199-1234 and 31 02 31 1234.";
-console.log(findCprNumbers(text1)); // Output: []
-var text2 = "There are no CPR numbers here.";
-console.log(findCprNumbers(text2)); // Output: []
-var text3 = "Mixed cases: 010203-1234, 3201991234, and 0405061234.";
-console.log(findCprNumbers(text3)); // Output: ['010203-1234', '0405061234']
