@@ -7,7 +7,6 @@
  * - \d{2}: Two-digit year (e.g., 99 for 1999 or 23 for 2023).
  * - [-]?: An optional hyphen between `DDMMYY` and `XXXX`.
  * - \d{4}: A four-digit individual number.
- * - \b: Ensures the match starts and ends at word boundaries, preventing partial matches.
  * - /g: Global flag to find all occurrences in the text.
  *
  * Matching Process:
@@ -25,6 +24,6 @@
  */
 export function findCprNumbers(text: string): string[] {
     // CPR number pattern (handles with/without hyphen)
-    const cprPattern = /\b(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])\d{2}[-]?\d{4}\b/g;
+    const cprPattern = /(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])\d{2}[-]?\d{4}/g;
     return text.match(cprPattern) || [];
 }
