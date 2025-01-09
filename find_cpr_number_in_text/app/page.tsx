@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState } from 'react';
 import { findCprNumbers } from '@/textUtils'; // Assuming findCprNumbers is correctly exported and imported

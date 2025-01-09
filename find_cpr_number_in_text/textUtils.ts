@@ -23,7 +23,7 @@
  * @author Nikolai Sandbeck
  */
 export function findCprNumbers(text: string): string[] {
-    // CPR number pattern (handles with/without hyphen)
-    const cprPattern = /(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])\d{2}[-]?\d{4}/g;
-    return text.match(cprPattern) || [];
+  // CPR number pattern (handles with/without hyphen)
+  const cprPattern = /(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])\d{2}[-]?\d{4}/g;
+  return text.match(cprPattern) || [];
 }
