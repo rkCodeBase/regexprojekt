@@ -14,11 +14,11 @@ const HomePage = () => {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h1>Find CPR Numbers</h1>
+      <h1>Find CPR-numre</h1>
       <textarea
         value={text}
         onChange={(e) => setText(e.target.value)} // Update state on text change
-        placeholder="Enter text here"
+        placeholder="Skriv her..."
         rows={6}
         cols={50}
         style={{
@@ -28,10 +28,10 @@ const HomePage = () => {
       ></textarea>
       <br />
       <button onClick={handleCheck} style={{ marginTop: '10px' }}>
-        Find CPR Numbers
+        Klik her for at finde CPR-numre
       </button>
       <div style={{ marginTop: '20px' }}>
-        <h3>Found CPR Numbers:</h3>
+        <h3>Fundne CPR-numre:</h3>
         {cprNumbers.length > 0 ? (
           <ul>
             {cprNumbers.map((cpr, index) => (
@@ -39,7 +39,7 @@ const HomePage = () => {
             ))}
           </ul>
         ) : (
-          <p>No CPR numbers found.</p>
+          <p>Ingen CPR-numre fundet.</p>
         )}
       </div>
     </div>
