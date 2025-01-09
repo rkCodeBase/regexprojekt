@@ -1,4 +1,8 @@
-// __tests__/textUtils.test.ts
+/** __tests__/textUtils.test.ts
+ * 
+ * Is for testing if findCprNumbers can find cpr numbers and differ cpr numbers
+ * from non cpr numbers.
+*/
 import { findCprNumbers } from '@/textUtils';
 
 describe('findCprNumbers', () => {
