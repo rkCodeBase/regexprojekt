@@ -31,4 +31,10 @@ describe('findCprNumbers', () => {
     const result = findCprNumbers(text);
     expect(result).toEqual([]);
   });
+
+  it('should find CPR numbers with no spacing before and after the number', () => {
+    const text = 'Valid CPR010203-1234but with no spacing before and after';
+    const result = findCprNumbers(text);
+    expect(result).toEqual(['010203-1234']);
+  });
 });
