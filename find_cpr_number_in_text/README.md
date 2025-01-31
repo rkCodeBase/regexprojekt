@@ -1,3 +1,7 @@
+## About:
+
+This is a project to screen text for potential cpr numbers, and then flag them.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
